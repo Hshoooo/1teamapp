@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bang">약속</string>
+    <color name="bg">#FF9090</color>
+    <color name="mainbg">#F7F7F7</color>
+
+
+</resources>
