@@ -1,14 +1,32 @@
 package com.example.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+
+import android.content.Intent;
+
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import android.view.View;
+
+import android.view.View.OnClickListener;
+
+import android.widget.Button;
 
 
-    @Override
+
+public class MainActivity extends Activity implements OnClickListener{
+
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btn_move = (Button)findViewById(R.id.button1);
+        btn_move.setOnClickListener(this);
+
+    }
+    public void onClick(View v) {
+        Intent intent = new Intent(this, MainPage.class);
+        startActivity(intent);
     }
 }
+
