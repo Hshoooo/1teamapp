@@ -2,16 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent" android:gravity="center"
-    android:background="@color/bg"
     android:layout_height="match_parent"
+    android:background="#FF9090"
     >
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="125dp"
-        android:layout_height="65dp"
-        android:background="#FF9090"
-        android:text="@string/bang"
-        android:textSize="18pt" />
 
     <Button
         android:id="@+id/button1"
