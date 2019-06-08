@@ -30,13 +30,13 @@
          android:textSize="20dp"
          android:text="시간 선택 : "/>
 
-        <RadioButton
+        <CheckBox
         android:id="@+id/radio0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="오후" />
 
-        <RadioButton
+        <CheckBox
             android:layout_marginLeft="30dp"
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
@@ -58,32 +58,38 @@
         android:layout_gravity="center"
         android:layout_marginLeft="60dp"
         >
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="1시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="2시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="3시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="4시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="5시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="6시"
@@ -99,32 +105,38 @@
         >
 
 
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="7시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="8시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="9시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="10시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="11시"
             />
-        <RadioButton
+        <CheckBox
+            android:id="@+id/h_12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text ="12시"
@@ -137,7 +149,12 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:textSize="30dp"
+        android:id="@+id/button1"
         android:text="선택완료"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"/>
 
 </LinearLayout>

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/myTheme">
-        <activity android:name=".DB_exam">
+        <activity android:name=".Time_DB">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalendarActivity"></activity>
-        <activity android:name=".Time"></activity>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>
