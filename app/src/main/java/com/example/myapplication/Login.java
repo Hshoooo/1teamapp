@@ -69,7 +69,7 @@ public class Login extends AppCompatActivity {
 
             public void onClick(View view) {
 
-                String userID = idText.getText().toString();
+                final String userID = idText.getText().toString();
 
                 String userPassword = passwordText.getText().toString();
 
@@ -101,12 +101,14 @@ public class Login extends AppCompatActivity {
 
                                         .create();
 
-                                GlobalsId gloId = (GlobalsId)getApplication();
-                                gloId.setGlobalString(idText.getText().toString());
+
                                 Log.e("ang",idText.getText().toString());
                                 dialog.show();
 
-                                Intent intent = new Intent(Login.this, Friend.class);
+                                Global user = (Global) getApplication();
+                                user.setUserID(userID);
+
+                                Intent intent = new Intent(Login.this, GoCalendar.class);
 
                                 Login.this.startActivity(intent);
 

@@ -43,8 +43,6 @@ public class Friend extends Activity {
         setContentView(R.layout.friend);
 
         listView=(ListView)findViewById(R.id.listView1);
-        btnAdd=(Button)findViewById(R.id.btnAdd);
-        btnDel=(Button)findViewById(R.id.btnDel);
 
 
 //        img_ani= (ImageView)findViewById(R.drawable.dd);
@@ -85,39 +83,14 @@ public class Friend extends Activity {
             }
         });
 
-        final EditText edt=(EditText)findViewById(R.id.edt1);
-
-
-        //버튼을 눌렀을때 입력된 항목 추가하기
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //입력된 문자열 얻어오기
-                String str=edt.getText().toString();
-                //입력된 값을 ArrayList에 추가하기
-                list.add(str);
-                //모델객체가 변경되었음을 어댑터뷰에 알리기
-                adapter.notifyDataSetChanged();
-                //입력된 값 지우기
-                edt.setText("");
-            }
-        });
 
 
 
-        btnDel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //선택된 항목의 인덱스 얻어오기
-                int pos=listView.getCheckedItemPosition();
-                //ArrayList에서 항목 지우기
-                list.remove(pos);
-                //어댑터에 항목이 바뀜을 알리기
-                adapter.notifyDataSetChanged();
-                //선택한 항목표시 없애기
-                listView.clearChoices();
-            }
-        });
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.example.test;
+package com.example.myapplication;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -51,13 +51,15 @@ public class addFriend extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friend);
+        setContentView(R.layout.friend);
 
 
         mlistView = (ListView) findViewById(R.id.listView1);
         mArrayList = new ArrayList<>();
         mContext = this;
         GetData task = new GetData();
+
+
         task.execute("http://10.0.2.2/AddFriend.php");
     }
 
@@ -70,7 +72,7 @@ public class addFriend extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            progressDialog = ProgressDialog.show(MainActivity.this,
+            progressDialog = ProgressDialog.show(addFriend.this,
                     "Please Wait", null, true, true);
         }
 
@@ -78,6 +80,7 @@ public class addFriend extends AppCompatActivity {
         @Override
         public void onPostExecute(String result) {
             super.onPostExecute(result);
+
 
             progressDialog.dismiss();
 
@@ -99,6 +102,8 @@ public class addFriend extends AppCompatActivity {
         public String doInBackground(String... params) {
 
             String serverURL = params[0];
+            Global user = (Global) getApplication();
+            String userID = "userID="+user.getUserID();
 
 
             try {
@@ -109,7 +114,14 @@ public class addFriend extends AppCompatActivity {
 
                 httpURLConnection.setReadTimeout(5000);
                 httpURLConnection.setConnectTimeout(5000);
+                httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.connect();
+
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                outputStream.write(userID.getBytes("UTF-8"));
+                outputStream.flush();
+                outputStream.close();
+
 
 
                 int responseStatusCode = httpURLConnection.getResponseCode();
@@ -174,7 +186,7 @@ public class addFriend extends AppCompatActivity {
             }
 
             ListAdapter adapter = new SimpleAdapter(
-                    MainActivity.this, mArrayList, android.R.layout.simple_list_item_2,
+                    addFriend.this, mArrayList, android.R.layout.simple_list_item_2,
                     new String[]{TAG_ID},
                     new int[]{android.R.id.text1}
             );
