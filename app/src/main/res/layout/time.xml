@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/mainbg"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg"
+        android:gravity="center"
+        android:text="시간 정하기"
+        android:textSize="25sp"
+
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center">
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="20dp"
+         android:text="시간 선택 : "/>
+
+        <CheckBox
+        android:id="@+id/radio0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오후" />
+
+        <CheckBox
+            android:layout_marginLeft="30dp"
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저녁" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_marginTop="30dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="60dp"
+        >
+        <CheckBox
+            android:id="@+id/h_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="1시"
+            />
+        <CheckBox
+            android:id="@+id/h_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="2시"
+            />
+        <CheckBox
+            android:id="@+id/h_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="3시"
+            />
+        <CheckBox
+            android:id="@+id/h_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="4시"
+            />
+        <CheckBox
+            android:id="@+id/h_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="5시"
+            />
+        <CheckBox
+            android:id="@+id/h_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="6시"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        >
+
+
+        <CheckBox
+            android:id="@+id/h_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="7시"
+            />
+        <CheckBox
+            android:id="@+id/h_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="8시"
+            />
+        <CheckBox
+            android:id="@+id/h_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="9시"
+            />
+        <CheckBox
+            android:id="@+id/h_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="10시"
+            />
+        <CheckBox
+            android:id="@+id/h_11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="11시"
+            />
+        <CheckBox
+            android:id="@+id/h_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text ="12시"
+            />
+    </LinearLayout>
+</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:id="@+id/button1"
+        android:text="선택완료"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"/>
+
+</LinearLayout>
